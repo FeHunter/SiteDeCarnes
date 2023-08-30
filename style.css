@@ -66,6 +66,7 @@ header nav li a:hover {
     display: flex;
     flex-direction: column;
     padding: 0px;
+    margin: 1px 0px;
     width: 100%;
     height: 420px;
     box-sizing: border-box;
@@ -83,17 +84,24 @@ header nav li a:hover {
     box-sizing: border-box;
     align-items: center;
     justify-content: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 #CoverGaleria p {
     display: block;
     color: white;
     font-weight: bolder;
-    font-size: 4rem;
+    font-size: 16pt;
+    margin-top: 100px;
 }
 #Galeria img {
     width: 100%;
+    height: 420px;
+    zoom: unset;
     padding: 0px; margin: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 h1 {
@@ -105,19 +113,123 @@ h1 img{
     margin: 180px auto 130px auto;
 }
 
+/* Carrinho - Direita */
+#Carrinho{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
+    height: 900px;
+    right: 0px;
+    top: 60px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    border-left: 1px dashed gray;
+    border-bottom: 1px dashed gray;
+    border-bottom-left-radius: 100px;
+}
+#Carrinho_Header {
+    display: flex;
+    justify-content: space-around;
+    font-size: 18pt;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed black;
+}
+
+#Carrinho_Lista {
+    height: 80%;
+    padding: 10px 20px;
+    list-style: none;
+}
+#Carrinho_Lista li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 10px 0px;
+
+    font-size: 13pt;
+    text-align: left;
+    color: black;
+
+    background-color: orange;
+    border-radius: 20px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+#Carrinho_Lista li span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    padding: 0px 5px;
+    margin: 0px 2px;
+}
+#Carrinho_Lista li span:nth-child(2) { 
+    border-left: 2px dashed whitesmoke;
+    border-right: 2px dashed whitesmoke;
+}
+#Carrinho_Lista li span:nth-child(3) { 
+    border-right: 2px dashed whitesmoke;
+}
+
+#Carrinho_Lista-RemoveBtn {
+    font-size: 18pt;
+    margin-left: 20px;
+    cursor: pointer;
+}
+#Carrinho_Lista-RemoveBtn:hover {
+    color: white;
+}
+
+#Carrinho_Footer {
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    bottom: 0px;
+    height: 50px;
+}
+#Carrinho_Footer input {
+    width: 170px;
+    padding: 10px 20px;
+    font-size: 12pt;
+    font-weight: bold;
+    background-color: orange;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s;
+}
+#Carrinho_Footer input:hover {
+    width: 200px;
+    font-size: 13pt;
+    color: white;
+    border-radius: 20px;
+    transition: .2s;
+}
+
 /* Content */
 #Content {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 100%;
-    margin: auto;
+    width: 80%;
+    float: left;
     padding-top: 60px;
+    margin-bottom: 10px;
 }
 
 .QuemSomos {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     width: 100%;
     align-items: center;
 }
@@ -127,11 +239,11 @@ h1 img{
     margin-right: 50px;
 }
 .QuemSomos p {
-    width: 40%;
     color: gray;
     font-size: 1.2rem;
     text-indent: 50px;
     text-align: justify;
+    margin-top: 50px;
 }
 
 #TiposDeCarne {
@@ -140,7 +252,6 @@ h1 img{
     flex-wrap: wrap;
     align-items: center;
     width: 90%;
-    height: 1200px;
 }
 
 /* Titulos */
@@ -240,10 +351,10 @@ footer {
     font-size: 10pt;
     color: gray;
     padding: 10px;
-    margin-top: 50px;
     box-sizing: border-box;
     background-color: black;
     border-top: 3px dashed orange;
+    clear: both;
 }
 footer nav {
     display: flex;
