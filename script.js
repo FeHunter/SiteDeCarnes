@@ -1,4 +1,4 @@
-
+// Galeria de imagens
 show_img = 1;
 
 Galeria();  
@@ -36,6 +36,82 @@ function Galeria (){
     }
 
     if (show_img > 4) { show_img = 0; }
-    console.log(show_img);
+    //console.log(show_img);
+
+}
+
+// Carrinho de compras
+
+const Carrinho = [];
+
+function GerenciarQuantidade (acao, e){
+    let quantidada = Number(e.parentElement.parentElement.querySelector("#Quantidade").textContent);
+    if (acao == "add"){
+        quantidada ++;
+    }else {
+        quantidada --;
+    }
+    e.parentElement.parentElement.querySelector("#Quantidade").textContent = quantidada;
+}
+
+function AdicionarAoCarrinho (e){
+    // Pegar valores do html
+    const nomeDaCarne = e.parentElement.parentElement.querySelector("#NomeCarne").textContent;
+    const precoDaCarne = Number(e.parentElement.parentElement.querySelector("#Preco").textContent.replace("R$", "").replace(",", "."));
+    const quantidadeDaCarne = Number(e.parentElement.parentElement.querySelector("#Quantidade").textContent);
+
+    // Objeto Item para adicionar ao carrinho
+    const Item = {
+        nome: nomeDaCarne,
+        preco: precoDaCarne,
+        quantidada: quantidadeDaCarne,
+    };
+
+    // Verificar se o item já esta no carrinho
+    let novaAdicao = 0;
+    if (Carrinho.length != 0){
+        for (let i=0; i < Carrinho.length; i++){
+            if (Carrinho[i].nome == Item.nome){
+                // Se tiver atualiza
+                Carrinho[i] = Item;
+                novaAdicao = 0;
+                break;
+            }else {
+                novaAdicao = 1;
+            }
+        }
+        // Se não adicionar item
+        if (novaAdicao == 1){
+            Carrinho.push(Item);
+        }
+    }
+    // Faz primeira adição a lista
+    else {
+        Carrinho.push(Item);
+    }
+
+    MostrarItemNoCarrinho ();
+}
+
+function RemoverDoCarrinho (posicaoNoCarrinho){
+    Carrinho.splice (posicaoNoCarrinho, 1);
+    MostrarItemNoCarrinho ();
+}
+
+function MostrarItemNoCarrinho (){
+    const lista = document.querySelector("#Carrinho_Lista");
+    lista.innerHTML = "";
+    for (let i=0; i < Carrinho.length; i++){
+        // Criar item, li para a lista
+        const item = document.createElement("li");
+        // Colocar informações
+        item.innerHTML = `
+        <span id="Carrinho_Lista-Nome">${Carrinho[i].nome}</span>
+        <span id="Carrinho_Lista-Quantidade">$${Carrinho[i].quantidada}kg</span>
+        <span id="Carrinho_Lista-Preco">$${Carrinho[i].preco}</span>
+        <i id="Carrinho_Lista-RemoveBtn" class="fa-solid fa-xmark" onclick="RemoverDoCarrinho(${i})"></i>
+        `;
+        lista.appendChild(item);
+    }
 
 }

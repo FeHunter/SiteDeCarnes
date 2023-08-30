@@ -92,22 +92,20 @@
                         <div class="Conteudo">
                             <img src="img/carnes/Exóticas/Carne de javali.jpg" alt="Icone de carne">
                             <div id="ConteudoDeTexto">
-                                <p id="Title">
-                                    Carne de Javali
-                                </p>
+                                <p id="Title"><span id="NomeCarne">Carne de Javali</span></p>
                                <div>
-                                <p> Preço: <br> <span>R$80,00</span> </p>
+                                <p> Preço: <br> <span id="Preco">R$80,00</span> </p>
                                 <p> Embalagem: <span>1Kg</span> </p>
                                </div>
                             </div>
                         </div>
                         <div class="Botao">
                             <div class="AdicionarQuantidade">
-                                <button type="button">-</button>
-                                <p>5</p>
-                                <button type="button">+</button>
+                                <button type="button" onclick="GerenciarQuantidade('remove', this)">-</button>
+                                <p id="Quantidade">5</p>
+                                <button type="button" onclick="GerenciarQuantidade('add', this)">+</button>
                             </div>
-                            <button id="Comprar" type="button">Adicionar</button>
+                            <button id="Comprar" type="button" onclick="AdicionarAoCarrinho(this)">Adicionar</button>
                         </div>
                     </div>
 
@@ -115,22 +113,20 @@
                         <div class="Conteudo">
                             <img src="img/carnes/Exóticas/Carne de codorna.jpg" alt="Icone de carne">
                             <div id="ConteudoDeTexto">
-                                <p id="Title">
-                                    Carne de codorna
-                                </p>
+                                <p id="Title"><span id="NomeCarne">Carne de codorna</span></p>
                                <div>
-                                <p> Preço: <br> <span>R$34,99</span> </p>
+                                <p > Preço: <br> <span id="Preco">R$34,99</span> </p>
                                 <p> Embalagem: <span>1Kg</span> </p>
                                </div>
                             </div>
                         </div>
                         <div class="Botao">
                             <div class="AdicionarQuantidade">
-                                <button type="button">-</button>
-                                <p>5</p>
-                                <button type="button">+</button>
+                                <button type="button" onclick="GerenciarQuantidade('remove', this)">-</button>
+                                <p id="Quantidade">5</p>
+                                <button type="button" onclick="GerenciarQuantidade('add', this)">+</button>
                             </div>
-                            <button id="Comprar" type="button">Adicionar</button>
+                            <button id="Comprar" type="button" onclick="AdicionarAoCarrinho(this)">Adicionar</button>
                         </div>
                     </div>
 
@@ -138,22 +134,20 @@
                         <div class="Conteudo">
                             <img src="img/carnes/Exóticas//Carne de coelho.jpg" alt="Icone de carne">
                             <div id="ConteudoDeTexto">
-                                <p id="Title">
-                                    Carne de coelho
-                                </p>
+                                <p id="Title"><span id="NomeCarne">Carne de coelho</span></p>
                                <div>
-                                <p> Preço: <br> <span>R$26,99</span> </p>
+                                <p> Preço: <br> <span id="Preco">R$26,99</span> </p>
                                 <p> Embalagem: <span>1Kg</span> </p>
                                </div>
                             </div>
                         </div>
                         <div class="Botao">
                             <div class="AdicionarQuantidade">
-                                <button type="button">-</button>
-                                <p>5</p>
-                                <button type="button">+</button>
+                                <button type="button" onclick="GerenciarQuantidade('remove', this)">-</button>
+                                <p id="Quantidade">5</p>
+                                <button type="button" onclick="GerenciarQuantidade('add', this)">+</button>
                             </div>
-                            <button id="Comprar" type="button">Adicionar</button>
+                            <button id="Comprar" type="button" onclick="AdicionarAoCarrinho(this)">Adicionar</button>
                         </div>
                     </div>
 
@@ -161,22 +155,20 @@
                         <div class="Conteudo">
                             <img src="img/carnes/Exóticas//Carnde de capivara.jpg" alt="Icone de carne">
                             <div id="ConteudoDeTexto">
-                                <p id="Title">
-                                    Carne de capivara
-                                </p>
+                                <p id="Title"><span id="NomeCarne">Carne de capivara</span></p>
                                <div>
-                                <p> Preço: <br> <span>R$89,99</span> </p>
+                                <p> Preço: <br> <span id="Preco">R$89,99</span> </p>
                                 <p> Embalagem: <span>1Kg</span> </p>
                                </div>
                             </div>
                         </div>
                         <div class="Botao">
                             <div class="AdicionarQuantidade">
-                                <button type="button">-</button>
-                                <p>5</p>
-                                <button type="button">+</button>
+                                <button type="button" onclick="GerenciarQuantidade('remove', this)">-</button>
+                                <p id="Quantidade">5</p>
+                                <button type="button" onclick="GerenciarQuantidade('add', this)">+</button>
                             </div>
-                            <button id="Comprar" type="button">Adicionar</button>
+                            <button id="Comprar" type="button" onclick="AdicionarAoCarrinho(this)">Adicionar</button>
                         </div>
                     </div>
 
@@ -340,27 +332,10 @@
                         <span id="Carrinho_Lista-Nome">T-Bone</span>
                         <span id="Carrinho_Lista-Quantidade">5kg</span>
                         <span id="Carrinho_Lista-Preco">$349,95</span>
-                        <i id="Carrinho_Lista-RemoveBtn" class="fa-solid fa-xmark"></i>
+                        <i id="Carrinho_Lista-RemoveBtn" class="fa-solid fa-xmark" onclick="RemoverDoCarrinho(this)"></i>
                     </li>
                 -->
-                <li>
-                    <span id="Carrinho_Lista-Nome">T-Bone</span>
-                    <span id="Carrinho_Lista-Quantidade">5kg</span>
-                    <span id="Carrinho_Lista-Preco">$349,95</span>
-                    <i id="Carrinho_Lista-RemoveBtn" class="fa-solid fa-xmark"></i>
-                </li>
-                <li>
-                    <span id="Carrinho_Lista-Nome">Carne de Javali</span>
-                    <span id="Carrinho_Lista-Quantidade">3kg</span>
-                    <span id="Carrinho_Lista-Preco">$225,50</span>
-                    <i id="Carrinho_Lista-RemoveBtn" class="fa-solid fa-xmark"></i>
-                </li>
-                <li>
-                    <span id="Carrinho_Lista-Nome">T-Bone</span>
-                    <span id="Carrinho_Lista-Quantidade">5kg</span>
-                    <span id="Carrinho_Lista-Preco">$349,95</span>
-                    <i id="Carrinho_Lista-RemoveBtn" class="fa-solid fa-xmark"></i>
-                </li>
+                <p>Carrinho vazio...</p>
             </ol>
             <div id="Carrinho_Footer">
                 <input type="button" value="Finalizar Comprar">
