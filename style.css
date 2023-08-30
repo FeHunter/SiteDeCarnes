@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    background-image: url("img/background.png");
+    background-attachment: fixed;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;    
+    align-items: center;
+    
+    width: 100%;
+    height: 60px;
+    padding: 0px 200px;
+    margin: 0px;
+    box-sizing: border-box;
+    background-color: rgb(255, 251, 242);
+    box-shadow: .5px .5px 5px gray;
+    z-index: 2;
+}
+
+header #ImgLogo {
+    width: 150px;
+}
+
+header h1 {
+    font-family: 'Roboto', sans-serif;
+}
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 75%;
+    height: 100%;
+}
+header nav li {
+    list-style: none;
+    margin: 0px 10px 0px 10px;
+}
+header nav li a {
+    font-size: 16pt;
+    color: gray;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 5px;
+    border-bottom: 5px solid white;
+    transition: .2s;
+}
+header nav li a:hover {
+    color: orange;
+    border-bottom: 5px solid orange;
+    transition: .3s;
+}
+
+/* Galeria de promoção */
+#Galeria{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    width: 100%;
+    height: 420px;
+    box-sizing: border-box;
+}
+.GaleriaContent {
+    height: 420px;
+}
+#CoverGaleria {
+    display: flex;
+    position: relative;
+    top: -425px;
+    width: 100%;
+    height: 420px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+
+#CoverGaleria p {
+    display: block;
+    color: white;
+    font-weight: bolder;
+    font-size: 4rem;
+}
+#Galeria img {
+    width: 100%;
+    padding: 0px; margin: 0px;
+}
+
+h1 {
+    display: block;
+    text-align: center;
+}
+h1 img{
+    width: 40%;
+    margin: 180px auto 130px auto;
+}
+
+/* Content */
+#Content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    padding-top: 60px;
+}
+
+.QuemSomos {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+}
+.QuemSomos img {
+    width: 550px;
+    height: 350px;
+    margin-right: 50px;
+}
+.QuemSomos p {
+    width: 40%;
+    color: gray;
+    font-size: 1.2rem;
+    text-indent: 50px;
+    text-align: justify;
+}
+
+#TiposDeCarne {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 90%;
+    height: 1200px;
+}
+
+/* Titulos */
+h2 {
+    width: 100%;
+    font-size: 18pt;
+    padding: 20px 10px 20px 10px;
+    margin-bottom: 100px;
+    text-align: center;
+    color: white;
+    background-color: orange;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+/* Contato & Localização */
+#ContatoLocalizacao{
+    display: flex;
+    width: 90%;
+}
+#ContatoLocalizacao div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+#ContatoLocalizacao div h2 {
+    width: 80%;
+}
+#ContatoLocalizacao div p {
+    margin: 10px 0px;
+    font-size: 14pt;
+    font-weight: bolder;
+    color: orange;
+}
+#Mapa {
+    width: 80%;
+    height: 80%;
+    border: none;
+    box-shadow: 1px 1px 5px gray;
+}
+
+#AreaContato form fieldset {
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width:  auto;
+    height: 450px;
+    padding: 50px;
+    border: none;
+    box-shadow: 1px 1px 5px gray;
+}
+#AreaContato div {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    margin: 10px;
+    padding: 5px 0px;
+    box-sizing: border-box;
+    text-align: left;
+}
+#AreaContato label {
+    font-family: 'Roboto', sans-serif;
+}
+#AreaContato input {
+    padding: 5px 0px 5px 0px;
+    width: 300px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#BotaoFormulario {
+    width: 90%;
+}
+#BotaoFormulario button {
+    width: 80%;
+    color: white;
+    font-weight: bold;
+    background-color: orange;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    transition: .2s;
+}
+#BotaoFormulario button:hover {
+    color: black;
+    background-color: tomato;
+    transition: .2s;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    text-align: center;
+    font-size: 10pt;
+    color: gray;
+    padding: 10px;
+    margin-top: 50px;
+    box-sizing: border-box;
+    background-color: black;
+    border-top: 3px dashed orange;
+}
+footer nav {
+    display: flex;
+    justify-content: center;
+}
+footer nav li {
+    list-style: none;
+    padding: 10px;
+}
+footer nav img {
+    width: 30px;
+    margin: 0px 20px;
+}

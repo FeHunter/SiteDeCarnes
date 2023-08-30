@@ -1,0 +1,152 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+    border: 1px solid black;
+    padding: 50px;
+}
+
+#ContentCarnes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    height: 800px;
+    padding: 50px;
+    margin: 50px 0px 50px 0px;
+    box-sizing: border-box;
+}
+
+#BlocoDeCarne {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 250px;
+    height: 400px;
+    padding: 5px;
+    margin: 10px 0px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px gray;
+    background-color: white;
+    transition: .2s;
+}
+#BlocoDeCarne:hover {
+    width: 280px;
+    height: 440px;
+    transition: .2s;
+    box-shadow: .5px .5px 5px orange;
+}
+
+.Conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 70%;
+}
+.Conteudo img {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+#ConteudoDeTexto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#ConteudoDeTexto div { /* Bloco de preço e kg */
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px dashed gray;
+}
+#ConteudoDeTexto #Title {
+    justify-content: center;
+    margin-bottom: 5px;
+    transition: .2s;
+}
+#BlocoDeCarne:hover #Title {
+    font-size: 18pt;
+    transition: .2s;
+}
+
+#ConteudoDeTexto div p {
+    width: 100px;
+    flex-wrap: wrap;
+}
+#ConteudoDeTexto div p span {
+    color: orange;
+}
+
+.Conteudo p {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    padding: 0px;
+    margin: 2px 0px;
+    color: gray;
+    text-align: justify;
+    font-size: 14pt;
+    box-sizing: border-box;
+}
+
+.Botao {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+#Comprar {
+    width: 120px;
+    height: 100%;
+    color: white;
+    font-weight: bold;
+    background-color: orange;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    transition: .2s;
+}
+#Comprar:hover {
+    color: wheat;
+    background-color: tomato;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.AdicionarQuantidade {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100px;
+    height: 100%;
+    font-size: 16pt;
+    
+}
+.AdicionarQuantidade button {
+    width: 35px;
+    height: 35px;
+    color: white;
+    background-color: orange;
+    border-radius: 50%;
+    border: none;
+}
+.AdicionarQuantidade button:hover {
+    cursor: pointer;
+    color: wheat;
+    background-color: tomato;
+}
