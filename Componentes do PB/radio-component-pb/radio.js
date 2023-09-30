@@ -9,5 +9,14 @@ for (let i=0; i < allRadios.length; i++){
 }
 
 function MarkRadio (radioID, radioCheckID){
-    allRadios[radioID].children[radioCheckID].children[0].classList.toggle("RadioCircleChecked");
+    for (let i=0; i < allRadios.length; i++){
+        for (let j=0; j < allRadios[i].children.length; j++){
+            if (i == radioID && j == radioCheckID){
+                allRadios[radioID].children[radioCheckID].children[0].classList.add("RadioCircleChecked");
+            }else {
+                allRadios[i].children[j].children[0].classList.remove("RadioCircleChecked");
+            }
+        }
+    }
+    
 }

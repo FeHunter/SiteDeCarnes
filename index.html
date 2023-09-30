@@ -12,6 +12,15 @@
     <link rel="stylesheet" href="Componentes do PB/radio-component-pb/style.css" />
     <script src="Componentes do PB/radio-component-pb/radio.js" defer></script>
 
+    <!-- Select Dropdown -->
+    <link rel="stylesheet" href="Componentes do PB/component-select-dropdown/style.css">
+    <script src="Componentes do PB/component-select-dropdown/dropdown.js" defer></script>
+
+    <!-- Select Dropdown -->
+    <link rel="stylesheet" href="Componentes do PB/componente-checkbox/style.css">
+    <script src="Componentes do PB/componente-checkbox/checkbox.js" defer></script>
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
@@ -286,37 +295,69 @@
                     </p>
                     <form action="">
                         <fieldset>
+                            <p>Dados:</p>
                             <div>
-                                <label>Nome Completo:</label>
+                                <label for="nome"><p>Nome Completo:</p></label>
                                 <input type="text" name="nome" id="nome" placeholder="Seu nome...">
                             </div>
                             <div>
-                                <label>Email:</label>
+                                <label for="email"><p>Email:</p></label>
                                 <input type="email" name="email" id="email" placeholder="E-mail para contato">
                             </div>
                             <div>
-                                <label>Telefone:</label>
+                                <label for="telefone"><p>Telefone:</p></label>
                                 <input type="text" name="telefone" id="telefone" placeholder="Telefone de contato">
                             </div>
                             <div>
-                                <div id="Radios">
-
-                                    <div class="MainRadio">
-                                        <div class="RadioCircle"></div>
-                                        <p>Desenvolvimento</p>
-                                    </div>
-                                
-                                    <div class="MainRadio">
-                                        <div class="RadioCircle RadioCircleChecked"></div>
-                                        <p>Segurança</p>
-                                    </div>
-                                
-                                    <div class="MainRadio">
-                                        <div class="RadioCircle"></div>
-                                        <p>Análise de Dados</p>
-                                    </div>
-                            
-                                </div>
+                                <p>Preferência:</p>
+                                <span id="Radios">
+                                    <span class="MainRadio">
+                                        <span class="RadioCircle"></span>
+                                        <p>Carnes exóticas</p>
+                                    </span>
+                                    <span class="MainRadio">
+                                        <span class="RadioCircle"></span>
+                                        <p>Carnes tradicionais</p>
+                                    </span>
+                                    <span class="MainRadio">
+                                        <span class="RadioCircle RadioCircleChecked"></span>
+                                        <p>Ambas</p>
+                                    </span>
+                                </span>
+                            </div>
+                            <div>
+                                <p>Tipo de carne favorita:</p>
+                                <span id="SelectDropdown">
+                                    <span class="ShowSelected">
+                                        <p>Sem Categoria (Todos da Agenda)</p>
+                                        <i class="fa-solid fa-angle-down " ></i>
+                                        <i class="fa-solid fa-angle-up" style="display: none;"></i>
+                                    </span>
+                                    <span class="FloatOptions FloatOptionsHide">
+                                        <span class="SelectOptions">Bovina</span>
+                                        <span class="SelectOptions">Suína</span>
+                                        <span class="SelectOptions">Aves</span>
+                                        <span class="SelectOptions">Frutos do Mar</span>
+                                        <span class="SelectOptions">Outras</span>
+                                    </span>
+                                </span>
+                            </div>
+                            <div>
+                                <p>Receber comunicações por:</p>
+                                <span id="MainCheck">
+                                    <span class="CheckBoxRow selectAll" onclick="Check(this, 0)">
+                                        <span class="CheckBox"></span>
+                                        <p>Todos os meios</p>
+                                    </span>
+                                    <span class="CheckBoxRow " onclick="Check(this, 1)">
+                                        <span class="CheckBox"></span>
+                                        <p>E-mail</p>
+                                    </span>
+                                    <span class="CheckBoxRow" onclick="Check(this, 2)">
+                                        <span class="CheckBox"></span>
+                                        <p>SMS</p>
+                                    </span>
+                                </span>
                             </div>
                             <div id="BotaoFormulario">
                                 <button type="button">Enviar</button>

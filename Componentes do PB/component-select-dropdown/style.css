@@ -11,23 +11,27 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+
+    width: 400px;
     height: 50px;
+
+    margin-left: 100px;
     padding: 0px 10px;
-    color: black;
+
     background-color: whitesmoke;
     border: 1px solid transparent;
     border-radius: 10px;
     box-sizing: border-box;
+
     cursor: pointer;
 }
 .ShowSelected:hover {
-    color: #19A7CE;
+    color: brown;
 }
 
 .ShowSelectedHighlight {
-    border: 1px solid #19A7CE;
-    color: #19A7CE;
+    border: 1px solid brown;
+    color: brown;
 }
 
 .FloatOptions {
@@ -36,7 +40,7 @@
     flex-direction: column;
     width: 300px;
     height: auto;
-    top: 55px;
+    bottom: 55px;
     padding: 10px;
     background-color: whitesmoke;
     border-radius: 10px;
@@ -58,5 +62,5 @@
     cursor: pointer;
 }
 .SelectOptions:hover {
-    color: #19A7CE;
+    color: brown;
 }

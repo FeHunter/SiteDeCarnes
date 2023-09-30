@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
 * {
     padding: 0px;
     margin: 0px;
@@ -289,7 +288,6 @@ h2 {
     margin: 10px 0px;
     font-size: 14pt;
     font-weight: bolder;
-    color: brown;
 }
 #Mapa {
     width: 80%;
@@ -304,7 +302,6 @@ h2 {
     flex-direction: column;
     justify-content: space-around;
     width:  auto;
-    height: 450px;
     padding: 50px;
     border: none;
     box-shadow: 1px 1px 5px gray;
