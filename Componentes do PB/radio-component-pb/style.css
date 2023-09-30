@@ -1,0 +1,31 @@
+#Radios {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    height: 40px;
+}
+
+.MainRadio {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 150px;
+    height: 20px;
+    margin: 10px 0px;
+    padding: 0px 5px;
+    cursor: pointer;
+}
+
+.RadioCircle {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.RadioCircleChecked {
+    background-color: tomato;
+}

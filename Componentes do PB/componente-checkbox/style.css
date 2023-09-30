@@ -1,0 +1,35 @@
+#MainCheck {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    margin-bottom: 50px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.CheckBoxRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    margin: 5px 0px;
+    cursor: pointer;
+}
+
+.CheckBox {
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    margin: 1px 0px;
+    border: 1px solid black;
+}
+
+.Checked {
+    background-color: green;
+}
+
+.NotEmpty {
+    background-color: yellow;
+}

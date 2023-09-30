@@ -17,9 +17,9 @@ section {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 80%;
-    padding: 50px;
-    margin: 50px 0px 50px 0px;
+    width: 100%;
+    padding: 0px;
+    margin: 0px 0px 50px 0px;
     box-sizing: border-box;
 }
 
@@ -44,7 +44,7 @@ section {
     width: 280px;
     height: 440px;
     transition: .2s;
-    box-shadow: .5px .5px 5px orange;
+    box-shadow: .5px .5px 5px rgb(26, 26, 26);;
 }
 
 .Conteudo {
@@ -89,7 +89,7 @@ section {
     flex-wrap: wrap;
 }
 #ConteudoDeTexto div p span {
-    color: orange;
+    color: brown;
 }
 
 .Conteudo p {
@@ -114,7 +114,7 @@ section {
     height: 100%;
     color: white;
     font-weight: bold;
-    background-color: orange;
+    background-color: rgb(26, 26, 26);
     border: none;
     border-radius: 20px;
     padding: 10px;
@@ -122,7 +122,7 @@ section {
 }
 #Comprar:hover {
     color: wheat;
-    background-color: tomato;
+    background-color: brown;
     transition: .2s;
     cursor: pointer;
 }
@@ -140,12 +140,12 @@ section {
     width: 35px;
     height: 35px;
     color: white;
-    background-color: orange;
+    background-color: rgb(26, 26, 26);
     border-radius: 50%;
     border: none;
 }
 .AdicionarQuantidade button:hover {
     cursor: pointer;
     color: wheat;
-    background-color: tomato;
+    background-color: brown;
 }
