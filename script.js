@@ -44,11 +44,16 @@ function Galeria (){
 
 const Carrinho = [];
 
+function MostrarEsconderCarrinho (){
+    const carrinho = document.querySelector("#Carrinho");
+    carrinho.classList.toggle("hide");
+}
+
 function GerenciarQuantidade (acao, e){
     let quantidada = Number(e.parentElement.parentElement.querySelector("#Quantidade").textContent);
-    if (acao == "add"){
+    if (acao == "add" && quantidada < 99){
         quantidada ++;
-    }else {
+    }else if (quantidada > 1){
         quantidada --;
     }
     e.parentElement.parentElement.querySelector("#Quantidade").textContent = quantidada;

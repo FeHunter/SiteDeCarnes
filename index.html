@@ -16,7 +16,7 @@
     <!--
         Colocar ALT e TITLE nas Imagens.
 
-	Site de referência: https://casadecarnesrei.com.br/
+	Site de referência: https://www.meatsbylinz.com
 
     Adicionar: Carrinho ao lado
     site de referência: https://www.tendaatacado.com.br/carnes-aves-e-peixes
@@ -33,37 +33,40 @@
                 <li><a href="#CarnesNobres">Carnes Nobres</a></li>
                 <li><a href="#Contato">Contato</a></li>
                 <li><a href="#Localizacao">Localização</a></li>
+                <li><i id="CarrinhoBtn" class="fa-solid fa-cart-shopping" onclick="MostrarEsconderCarrinho()"></i></li>
             </nav>
         </header>
 
-        <div id="Content">
-
-            <div id="Galeria">
-                <div class="GaleriaContent" id="GaleriaContent1">
-                    <img src="img/carnes/Barnners/Barnner 1.jpg" alt="descrição img 1" title="Barnner Delicias de carne">
-                    <div id="CoverGaleria">
-                        <p> Carnes Exóticas </p>
-                    </div>
-                </div>
-                <div class="GaleriaContent" id="GaleriaContent2">
-                    <img src="img/carnes/Barnners/Barnner 2.jpg" alt="descrição img 1">
-                    <div id="CoverGaleria">
-                        <p> Carnes Nobres </p>
-                    </div>
-                </div>
-                <div class="GaleriaContent" id="GaleriaContent3">
-                    <img src="img/carnes/Barnners/Barnner 3.jpg" alt="descrição img 1">
-                    <div id="CoverGaleria">
-                        <p> Melhor preço </p>
-                    </div>
-                </div>
-                <div class="GaleriaContent" id="GaleriaContent4">
-                    <img src="img/carnes/Barnners/Barnner 4.jpg" alt="descrição img 1">
-                    <div id="CoverGaleria">
-                        <p> Tudo aqui </p>
-                    </div>
+        <div id="Galeria">
+            <div class="GaleriaContent" id="GaleriaContent1">
+                <img src="img/carnes/Barnners/Barnner 1.jpg" alt="descrição img 1" title="Barnner Delicias de carne">
+                <div id="CoverGaleria">
+                    <p> Carnes Exóticas </p>
                 </div>
             </div>
+            <div class="GaleriaContent" id="GaleriaContent2">
+                <img src="img/carnes/Barnners/Barnner 2.jpg" alt="descrição img 1">
+                <div id="CoverGaleria">
+                    <p> Carnes Nobres </p>
+                </div>
+            </div>
+            <div class="GaleriaContent" id="GaleriaContent3">
+                <img src="img/carnes/Barnners/Barnner 3.jpg" alt="descrição img 1">
+                <div id="CoverGaleria">
+                    <p> Melhor preço </p>
+                </div>
+            </div>
+            <div class="GaleriaContent" id="GaleriaContent4">
+                <img src="img/carnes/Barnners/Barnner 4.jpg" alt="descrição img 1">
+                <div id="CoverGaleria">
+                    <p> Tudo aqui </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="Content">
+
+            <!--Galeria aqui.... -->
 
             <!-- Logo com H1 -->
             <!-- <h1><img src="img/icons/Logo Text.png" alt="Delicia de Carnes PB"></h1> -->
@@ -102,7 +105,7 @@
                         <div class="Botao">
                             <div class="AdicionarQuantidade">
                                 <button type="button" onclick="GerenciarQuantidade('remove', this)">-</button>
-                                <p id="Quantidade">5</p>
+                                <p id="Quantidade">1</p>
                                 <button type="button" onclick="GerenciarQuantidade('add', this)">+</button>
                             </div>
                             <button id="Comprar" type="button" onclick="AdicionarAoCarrinho(this)">Adicionar</button>
@@ -123,7 +126,7 @@
                         <div class="Botao">
                             <div class="AdicionarQuantidade">
                                 <button type="button" onclick="GerenciarQuantidade('remove', this)">-</button>
-                                <p id="Quantidade">5</p>
+                                <p id="Quantidade">1</p>
                                 <button type="button" onclick="GerenciarQuantidade('add', this)">+</button>
                             </div>
                             <button id="Comprar" type="button" onclick="AdicionarAoCarrinho(this)">Adicionar</button>
@@ -144,7 +147,7 @@
                         <div class="Botao">
                             <div class="AdicionarQuantidade">
                                 <button type="button" onclick="GerenciarQuantidade('remove', this)">-</button>
-                                <p id="Quantidade">5</p>
+                                <p id="Quantidade">1</p>
                                 <button type="button" onclick="GerenciarQuantidade('add', this)">+</button>
                             </div>
                             <button id="Comprar" type="button" onclick="AdicionarAoCarrinho(this)">Adicionar</button>
@@ -165,7 +168,7 @@
                         <div class="Botao">
                             <div class="AdicionarQuantidade">
                                 <button type="button" onclick="GerenciarQuantidade('remove', this)">-</button>
-                                <p id="Quantidade">5</p>
+                                <p id="Quantidade">1</p>
                                 <button type="button" onclick="GerenciarQuantidade('add', this)">+</button>
                             </div>
                             <button id="Comprar" type="button" onclick="AdicionarAoCarrinho(this)">Adicionar</button>
@@ -184,22 +187,20 @@
                         <div class="Conteudo">
                             <img src="img/carnes/Nobres/Bife ancho.png" alt="Icone de carne">
                             <div id="ConteudoDeTexto">
-                                <p id="Title">
-                                    Bife Ancho
-                                </p>
+                                <p id="Title"><span id="NomeCarne">Bife Ancho</span></p>
                                <div>
-                                <p> Preço: <br> <span>R$10,00</span> </p>
+                                <p> Preço: <br> <span id="Preco">R$10,00</span> </p>
                                 <p> Embalagem: <span>1Kg</span> </p>
                                </div>
                             </div>
                         </div>
                         <div class="Botao">
                             <div class="AdicionarQuantidade">
-                                <button type="button">-</button>
-                                <p>5</p>
-                                <button type="button">+</button>
+                                <button type="button" onclick="GerenciarQuantidade('remove', this)">-</button>
+                                <p id="Quantidade">1</p>
+                                <button type="button" onclick="GerenciarQuantidade('add', this)">+</button>
                             </div>
-                            <button id="Comprar" type="button">Adicionar</button>
+                            <button id="Comprar" type="button" onclick="AdicionarAoCarrinho(this)">Adicionar</button>
                         </div>
                     </div>
 
@@ -207,22 +208,20 @@
                         <div class="Conteudo">
                             <img src="img/carnes/Nobres/Porterhouse.jpg" alt="Icone de carne">
                             <div id="ConteudoDeTexto">
-                                <p id="Title">
-                                    Porter House
-                                </p>
+                                <p id="Title"><span id="NomeCarne">Porter House</span></p>
                                <div>
-                                <p> Preço: <br> <span>R23,00</span> </p>
+                                <p> Preço: <br> <span id="Preco">R$23,00</span> </p>
                                 <p> Embalagem: <span>1Kg</span> </p>
                                </div>
                             </div>
                         </div>
                         <div class="Botao">
                             <div class="AdicionarQuantidade">
-                                <button type="button">-</button>
-                                <p>5</p>
-                                <button type="button">+</button>
+                                <button type="button" onclick="GerenciarQuantidade('remove', this)">-</button>
+                                <p id="Quantidade">1</p>
+                                <button type="button" onclick="GerenciarQuantidade('add', this)">+</button>
                             </div>
-                            <button id="Comprar" type="button">Adicionar</button>
+                            <button id="Comprar" type="button" onclick="AdicionarAoCarrinho(this)">Adicionar</button>
                         </div>
                     </div>
 
@@ -230,22 +229,20 @@
                         <div class="Conteudo">
                             <img src="img/carnes/Nobres/Shoulder steak.jpg" alt="Icone de carne">
                             <div id="ConteudoDeTexto">
-                                <p id="Title">
-                                    Shoulder Steak
-                                </p>
+                                <p id="Title"><span id="NomeCarne">Shoulder Steak</span></p>
                                <div>
-                                <p> Preço: <br> <span>R49,99</span> </p>
+                                <p> Preço: <br> <span id="Preco">R$49,99</span> </p>
                                 <p> Embalagem: <span>1Kg</span> </p>
                                </div>
                             </div>
                         </div>
                         <div class="Botao">
                             <div class="AdicionarQuantidade">
-                                <button type="button">-</button>
-                                <p>5</p>
-                                <button type="button">+</button>
+                                <button type="button" onclick="GerenciarQuantidade('remove', this)">-</button>
+                                <p id="Quantidade">1</p>
+                                <button type="button" onclick="GerenciarQuantidade('add', this)">+</button>
                             </div>
-                            <button id="Comprar" type="button">Adicionar</button>
+                            <button id="Comprar" type="button" onclick="AdicionarAoCarrinho(this)">Adicionar</button>
                         </div>
                     </div>
 
@@ -253,22 +250,20 @@
                         <div class="Conteudo">
                             <img src="img/carnes/Nobres/T-Bone.png" alt="Icone de carne">
                             <div id="ConteudoDeTexto">
-                                <p id="Title">
-                                    T-Bone
-                                </p>
+                                <p id="Title"><span id="NomeCarne">T-Bone</span></p>
                                <div>
-                                <p> Preço: <br> <span>R69,99</span> </p>
+                                <p> Preço: <br> <span id="Preco">R$69,99</span> </p>
                                 <p> Embalagem: <span>1Kg</span> </p>
                                </div>
                             </div>
                         </div>
                         <div class="Botao">
                             <div class="AdicionarQuantidade">
-                                <button type="button">-</button>
-                                <p>5</p>
-                                <button type="button">+</button>
+                                <button type="button" onclick="GerenciarQuantidade('remove', this)">-</button>
+                                <p id="Quantidade">1</p>
+                                <button type="button" onclick="GerenciarQuantidade('add', this)">+</button>
                             </div>
-                            <button id="Comprar" type="button">Adicionar</button>
+                            <button id="Comprar" type="button" onclick="AdicionarAoCarrinho(this)">Adicionar</button>
                         </div>
                     </div>
 
@@ -320,7 +315,7 @@
 
         </div>
 
-        <div id="Carrinho">
+        <div id="Carrinho" class="">
             <div id="Carrinho_Header">
                 <p>Carrinho</p>
                 <i class="fa-solid fa-cart-shopping"></i>
