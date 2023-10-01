@@ -133,7 +133,7 @@ function ValidarFormulario (){
     const palavras = nome.split(" ");
     //console.log(palavras);
     if (nome == "" || palavras.length < 2){
-        alert("Preencher nome corretamente");
+        alert("Preencher nome corretamente.");
         document.querySelector("#nome").style = "border: 1px solid red;";
         return;
     }else {
@@ -143,7 +143,7 @@ function ValidarFormulario (){
     // Email
     const email = document.querySelector("#email").value;
     if (! /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)){
-        alert("Preencher email corretamente");
+        alert("Preencher email corretamente.");
         document.querySelector("#email").style = "border: 1px solid red;";
         return;
     }else {
@@ -154,7 +154,7 @@ function ValidarFormulario (){
     const telefone = document.querySelector("#telefone").value;
     let telefoneValido;
     if (telefone == "" || telefone.length < 11){
-        alert("Telefone inválido");
+        alert("Telefone inválido.");
         document.querySelector("#telefone").style = "border: 1px solid red;";
         return;
     }else {
@@ -167,26 +167,47 @@ function ValidarFormulario (){
     // Radio (Preferências)
     const RadioValorSelecionado = document.querySelector("#RadioSelecionado");
     if (RadioValorSelecionado.textContent == ""){
-        alert("Selecionar preferência de carne");
+        alert("Selecionar preferência de carne.");
         return;
     }
 
     // Select-DropDown - Tipo de carne favorito
     const DropdownSelecionado = document.querySelector("#DropdownSelecionado");
     if (DropdownSelecionado.textContent == "" || DropdownSelecionado.textContent == "Escolha um tipo de carne"){
-        alert("Escolher tipo de carne preferido");
+        alert("Escolher tipo de carne preferido.");
         return;
     }
 
     // Check-box - Receber comunição por
-    
+    const CheckBoxSelecionado = document.querySelector("#CheckBoxSelecionado").textContent;
+    if (CheckBoxSelecionado == ""){
+        alert("Escolha um meio de comunicação.");
+        return;
+    }
 
+    // Mensagem
+    const mensagem = document.querySelector("#mensagem").value;
+    if (mensagem.length < 5){
+        alert("Mensagem muito curta, digite até 5 caracteres.");
+        return;
+    }
+
+
+    // Mostra no HTML
+    const resultadoDeEnvio = document.querySelector("#ResultadoDeEnvioFormulario");
+    resultadoDeEnvio.textContent = "Formulário enviado com sucesso!";
+    resultadoDeEnvio.style = "color: green;";
+
+
+    // Mostra no Console
     console.log(`
     Nome: ${nome}
     E-mail: ${email}
-    Telefone: ${telefone}
+    Telefone: ${telefoneValido}
     Radio-Preferências: ${RadioValorSelecionado.textContent}
-    Select-Tipo De Carne: ${DropdownSelecionado.textContent}
+    Tipo De Carne Favorita: ${DropdownSelecionado.textContent}
+    Meio de ComunicaçãoPor: ${CheckBoxSelecionado}
+    Mensagem: ${mensagem}
     `);
 
 }

@@ -64,5 +64,31 @@ function AllChecked (allChecks){
 }
 
 function VerificarValorSelecionado () {
-    console.log(valorSelecionado);
+
+    const allChecks = document.querySelector("#MainCheck");
+    // Verificar se 'todos' está marcado, se tiver passar valor e ignora os outros
+    if (allChecks.children[0].children[0].classList.contains("Checked")){
+        valorSelecionado = "Todos os meios";
+    }else {
+        // Ignora a opção 'todos os meios', começa pela segunda opção
+        for (let i=1; i < allChecks.children.length-1; i++ ){
+            if (allChecks.children[i].children[0].classList.contains("Checked")){
+                valorSelecionado = allChecks.children[i].children[1].textContent;
+            }
+        }
+    }
+
+    // Verificar se todos foram desmarcados
+    let count = 0;
+    for (let i=0; i < allChecks.children.length-1; i++ ){
+        if (!allChecks.children[i].children[0].classList.contains("Checked")){
+            count ++;
+        }
+    }
+    if (count >= 3){
+        valorSelecionado = "";
+    }
+
+    document.querySelector("#CheckBoxSelecionado").textContent = valorSelecionado;
+    //console.log(valorSelecionado);
 }
