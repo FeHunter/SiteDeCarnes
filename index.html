@@ -41,12 +41,14 @@
         <header>
             <img id="ImgLogo" src="img/icons/Logo.png" alt="Logo Delicias de Carnes" title="Logo Delicias de Carnes">
             <nav>
-                <li><a href="#QuemSomos">Quem Somos</a></li>
-                <li><a href="#CarnesExoticas">Carnes Exóticas</a></li>
-                <li><a href="#CarnesNobres">Carnes Nobres</a></li>
-                <li><a href="#Contato">Contato</a></li>
-                <li><a href="#Localizacao">Localização</a></li>
-                <li><i id="CarrinhoBtn" class="fa-solid fa-cart-shopping" onclick="MostrarEsconderCarrinho()"></i></li>
+                <ul>
+                    <li><a href="#QuemSomos">Quem Somos</a></li>
+                    <li><a href="#CarnesExoticas">Carnes Exóticas</a></li>
+                    <li><a href="#CarnesNobres">Carnes Nobres</a></li>
+                    <li><a href="#Contato">Contato</a></li>
+                    <li><a href="#Localizacao">Localização</a></li>
+                    <li><i id="CarrinhoBtn" class="fa-solid fa-cart-shopping" onclick="MostrarEsconderCarrinho()"></i></li>
+                </ul>
             </nav>
         </header>
 
@@ -57,25 +59,25 @@
             <div id="Galeria">
                 <div class="GaleriaContent" id="GaleriaContent1">
                     <img src="img/carnes/Barnners/Barnner 1.jpg" alt="descrição img 1" title="Barnner Delicias de carne">
-                    <div id="CoverGaleria">
+                    <div class="CoverGaleria">
                         <p> Carnes Exóticas </p>
                     </div>
                 </div>
                 <div class="GaleriaContent" id="GaleriaContent2">
                     <img src="img/carnes/Barnners/Barnner 2.jpg" alt="descrição img 1">
-                    <div id="CoverGaleria">
+                    <div class="CoverGaleria">
                         <p> Carnes Nobres </p>
                     </div>
                 </div>
                 <div class="GaleriaContent" id="GaleriaContent3">
                     <img src="img/carnes/Barnners/Barnner 3.jpg" alt="descrição img 1">
-                    <div id="CoverGaleria">
+                    <div class="CoverGaleria">
                         <p> Melhor preço </p>
                     </div>
                 </div>
                 <div class="GaleriaContent" id="GaleriaContent4">
                     <img src="img/carnes/Barnners/Barnner 4.jpg" alt="descrição img 1">
-                    <div id="CoverGaleria">
+                    <div class="CoverGaleria">
                         <p> Tudo aqui </p>
                     </div>
                 </div>
@@ -297,19 +299,19 @@
                         <fieldset>
                             <p>Dados:</p>
                             <div>
-                                <label for="nome"><p>Nome Completo:</p></label>
+                                <label for="nome"><p>Nome Completo: <span class="IndicadorObrigatorio" title="Campo obrigatório">*</span> </p></label>
                                 <input type="text" name="nome" id="nome" placeholder="Seu nome...">
                             </div>
                             <div>
-                                <label for="email"><p>Email:</p></label>
+                                <label for="email"><p>Email: <span class="IndicadorObrigatorio" title="Campo obrigatório">*</span> </p></label>
                                 <input type="email" name="email" id="email" placeholder="E-mail para contato">
                             </div>
                             <div>
-                                <label for="telefone"><p>Telefone:</p></label>
+                                <label for="telefone"><p>Telefone: <span class="IndicadorObrigatorio" title="Campo obrigatório">*</span> </p></label>
                                 <input type="text" name="telefone" id="telefone" placeholder="Telefone de contato">
                             </div>
                             <div>
-                                <p>Preferência:</p>
+                                <p>Preferência: <span class="IndicadorObrigatorio" title="Campo obrigatório">*</span> </p>
                                 <span id="Radios">
                                     <span class="MainRadio">
                                         <span class="RadioCircle"></span>
@@ -329,7 +331,7 @@
                                 <p>Tipo de carne favorita:</p>
                                 <span id="SelectDropdown">
                                     <span class="ShowSelected">
-                                        <p>Sem Categoria (Todos da Agenda)</p>
+                                        <p>Bovina</p>
                                         <i class="fa-solid fa-angle-down " ></i>
                                         <i class="fa-solid fa-angle-up" style="display: none;"></i>
                                     </span>
@@ -343,7 +345,7 @@
                                 </span>
                             </div>
                             <div>
-                                <p>Receber comunicações por:</p>
+                                <p>Receber comunicações por:<span class="IndicadorObrigatorio" title="Campo obrigatório">*</span></p>
                                 <span id="MainCheck">
                                     <span class="CheckBoxRow selectAll" onclick="Check(this, 0)">
                                         <span class="CheckBox"></span>
@@ -359,8 +361,11 @@
                                     </span>
                                 </span>
                             </div>
+                            <div>
+                                <textarea name="mensagem" id="mensagem" cols="50" rows="15" style="resize: none;" placeholder="Sua mensagem..."></textarea>
+                            </div>
                             <div id="BotaoFormulario">
-                                <button type="button">Enviar</button>
+                                <input id="buttonFormulario" type="button" value="Enviar">
                             </div>
                         </fieldset>
                     </form>

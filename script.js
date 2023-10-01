@@ -1,4 +1,5 @@
-// Galeria de imagens
+//#region -> Galeria
+
 show_img = 1;
 
 Galeria();  
@@ -39,8 +40,9 @@ function Galeria (){
     //console.log(show_img);
 
 }
+//#endregion
 
-// Carrinho de compras
+//#region -> Carrinho de compras
 
 const Carrinho = [];
 
@@ -120,3 +122,7 @@ function MostrarItemNoCarrinho (){
     }
 
 }
+//#endregion
+
+
+

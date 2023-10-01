@@ -34,18 +34,22 @@ header #ImgLogo {
 header h1 {
     font-family: 'Roboto', sans-serif;
 }
-header nav {
+
+header nav ul {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 75%;
+    width: 1300px;
     height: 100%;
 }
-header nav li {
+header nav ul li:last-child {
+    margin-left: 80px;
+}
+header nav ul li {
     list-style: none;
     margin: 0px 10px 0px 10px;
 }
-header nav li a {
+header nav ul li a {
     font-size: 16pt;
     color: white;
     text-decoration: none;
@@ -53,7 +57,7 @@ header nav li a {
     padding-bottom: 5px;
     transition: .2s;
 }
-header nav li a:hover {
+header nav ul li a:hover {
     color: orange;
     text-decoration: double underline;
     transition: .3s;
@@ -83,7 +87,7 @@ header nav li a:hover {
 .GaleriaContent {
     height: 420px;
 }
-#CoverGaleria {
+.CoverGaleria {
     display: flex;
     position: relative;
     top: -850px;
@@ -95,7 +99,7 @@ header nav li a:hover {
     justify-content: center;
 }
 
-#CoverGaleria p {
+.CoverGaleria p {
     display: block;
     color: white;
     font-weight: bolder;
@@ -324,10 +328,15 @@ h2 {
     font-family: 'Roboto', sans-serif;
 }
 
+.IndicadorObrigatorio {
+    color: red;
+    cursor: pointer;
+}
+
 #BotaoFormulario {
     width: 90%;
 }
-#BotaoFormulario button {
+#BotaoFormulario #buttonFormulario {
     width: 80%;
     color: white;
     font-weight: bold;
@@ -337,7 +346,7 @@ h2 {
     padding: 10px;
     transition: .2s;
 }
-#BotaoFormulario button:hover {
+#BotaoFormulario #buttonFormulario:hover {
     color: black;
     background-color: brown;
     transition: .2s;
