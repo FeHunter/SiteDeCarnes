@@ -115,7 +115,7 @@ function MostrarItemNoCarrinho (){
         item.innerHTML = `
         <span id="Carrinho_Lista-Nome">${Carrinho[i].nome}</span>
         <span id="Carrinho_Lista-Quantidade">$${Carrinho[i].quantidada}kg</span>
-        <span id="Carrinho_Lista-Preco">$${Carrinho[i].preco}</span>
+        <span id="Carrinho_Lista-Preco">$${ (Carrinho[i].preco * Carrinho[i].quantidada).toFixed(2) }</span>
         <i id="Carrinho_Lista-RemoveBtn" class="fa-solid fa-xmark" onclick="RemoverDoCarrinho(${i})"></i>
         `;
         lista.appendChild(item);

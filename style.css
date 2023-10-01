@@ -128,7 +128,7 @@ h1 img{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 20%;
+    width: 25%;
     height: 900px;
     right: 20px;
     top: 75px;
@@ -164,9 +164,9 @@ h1 img{
 
     font-size: 13pt;
     text-align: left;
-    color: black;
+    color: wheat;
 
-    background-color: orange;
+    background-color: brown;
     border-radius: 20px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
@@ -195,7 +195,7 @@ h1 img{
     cursor: pointer;
 }
 #Carrinho_Lista-RemoveBtn:hover {
-    color: white;
+    color: black;
 }
 
 #Carrinho_Footer {
@@ -366,6 +366,16 @@ h2 {
 #RadioTiposDeCarnes label {
     display: flex;
     border: 1px solid orange;
+}
+
+
+#AreaLocalizacao iframe {
+    height: 500px;
+}
+
+#AreaLocalizacao img {
+    width: 680px;
+    border-radius: 5px;
 }
 
 /* Footer */
