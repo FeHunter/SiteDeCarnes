@@ -1,4 +1,5 @@
 const t = document.querySelector("#MainCheck");
+let valorSelecionado;
 
 function Check (e, id){
     // All possibles check include the selectAll
@@ -34,6 +35,8 @@ function Check (e, id){
         selectAll.classList.add("Checked");
         selectAll.classList.remove("NotEmpty");
     }
+
+    VerificarValorSelecionado ();
 }
 
 // Check if the all check-boxies are checked (Visual) 
@@ -58,4 +61,8 @@ function AllChecked (allChecks){
     }else {
         return false;
     }
+}
+
+function VerificarValorSelecionado () {
+    console.log(valorSelecionado);
 }

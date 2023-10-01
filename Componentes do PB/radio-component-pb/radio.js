@@ -13,10 +13,11 @@ function MarkRadio (radioID, radioCheckID){
         for (let j=0; j < allRadios[i].children.length; j++){
             if (i == radioID && j == radioCheckID){
                 allRadios[radioID].children[radioCheckID].children[0].classList.add("RadioCircleChecked");
+                const valorSelecionado = document.querySelector("#RadioSelecionado");
+                valorSelecionado.innerHTML = allRadios[radioID].children[radioCheckID].children[1].textContent;
             }else {
                 allRadios[i].children[j].children[0].classList.remove("RadioCircleChecked");
             }
         }
     }
-    
 }

@@ -35,6 +35,9 @@ function ShowOptions (id){
 function SelectOption (dropdownID, optionID){
     allDropDown[dropdownID].children[0].children[0].innerHTML = allDropDown[dropdownID].children[1].children[optionID].textContent;
     ShowOptions(dropdownID);
+    const DropdownSelecionado = document.querySelector("#DropdownSelecionado");
+    DropdownSelecionado.textContent = allDropDown[dropdownID].children[0].children[0].textContent;
+    //console.log(DropdownSelecionado.textContent);
 }
 
 // Permitir apenas um dos dropdowns ativo
