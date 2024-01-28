@@ -1,0 +1,1 @@
+Site criado para projeto inicial da faculdade, ADS no Instituto Infnet. Usando somente html, css e javascript para criar todas as funcionalidades como o carrinho e o campo de formulário com dropdow e select options.
